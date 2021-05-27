@@ -1,12 +1,9 @@
-let source = document.getElementById('source');
-let preview = document.getElementById('preview');
-
 function renderHandler () {
-  let userIn = source.value
+  let userIn = source.textContent
 
   let userHTML = marked(userIn)
 
   preview.innerHTML = userHTML
 }
 
-source.addEventListener('keyup', renderHandler)
+source.addEventListener('change', renderHandler)

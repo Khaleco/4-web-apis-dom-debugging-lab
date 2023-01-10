@@ -1,7 +1,7 @@
 function renderHandler () {
   let userIn = source.textContent
 
-  let userHTML = marked(userIn)
+  let userHTML = marked.parse(userIn)
 
   preview.innerHTML = userHTML
 }
